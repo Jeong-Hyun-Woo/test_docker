@@ -1,11 +1,11 @@
 node {
-  git poll: true, url:'https://github.com/kimkangbo/jenkins_flask.git'
+  git poll: true, url:'https://github.com/Jeong-Hyun-Woo/test_dockeer.git'
   withCredentials([[$class: 'UsernamePasswordMultiBinding',
      credentialsId: 'docker-hub',
      usernameVariable: 'DOCKER_USER_ID',
      passwordVariable: 'DOCKER_USER_PASSWORD']]) {
        stage('Pull') {
-            git 'https://github.com/kimkangbo/jenkins_flask.git'
+            git 'https://github.com/Jeong-Hyun-Woo/test_docker.git'
        }
        stage('Unit Test') {
        }
